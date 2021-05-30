@@ -26,9 +26,12 @@ public class orders extends javax.swing.JFrame {
      */
     public orders() {
         initComponents();
+        transactID.setVisible(false);
         displayBreakfast();
         displayLunch();
         displayDinner();
+        displayTransaction();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -65,6 +68,15 @@ public class orders extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         dinnerTable = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jPanel14 = new javax.swing.JPanel();
+        confirmBillButton = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        transactTable = new javax.swing.JTable();
+        transactID = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -82,13 +94,14 @@ public class orders extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBackground(new java.awt.Color(220, 232, 238));
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
+        jPanel3.setForeground(new java.awt.Color(0, 51, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 58, -1, -1));
 
-        jPanel7.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel7.setBackground(new java.awt.Color(0, 102, 102));
         jPanel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel7.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -123,12 +136,12 @@ public class orders extends javax.swing.JFrame {
         jPanel7.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 93, 35));
         jPanel7.add(nameTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 192, 35));
 
-        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 272, 532, 455));
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 532, 455));
 
         jPanel2.setLayout(null);
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 64, -1, -1));
 
-        jPanel8.setBackground(new java.awt.Color(220, 232, 238));
+        jPanel8.setBackground(new java.awt.Color(0, 102, 102));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         breakfastTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -156,15 +169,15 @@ public class orders extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(breakfastTable);
 
-        jPanel8.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 290, 110));
+        jPanel8.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 290, 180));
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel1.setText("BREAKFAST");
         jPanel8.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 4, 130, 30));
 
-        jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 71, 333, 163));
+        jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 230));
 
-        jPanel12.setBackground(new java.awt.Color(220, 232, 238));
+        jPanel12.setBackground(new java.awt.Color(0, 102, 102));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lunchTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -192,15 +205,15 @@ public class orders extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(lunchTable);
 
-        jPanel12.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 290, 110));
+        jPanel12.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 290, 180));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setText("LUNCH");
-        jPanel12.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 4, 130, 30));
+        jPanel12.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 130, 30));
 
-        jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 71, 333, 163));
+        jPanel3.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 320, 230));
 
-        jPanel13.setBackground(new java.awt.Color(220, 232, 238));
+        jPanel13.setBackground(new java.awt.Color(0, 102, 102));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dinnerTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -228,13 +241,58 @@ public class orders extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(dinnerTable);
 
-        jPanel13.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 290, 110));
+        jPanel13.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 290, 180));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setText("DINNER");
         jPanel13.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 4, 130, 30));
 
-        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 71, -1, -1));
+        jPanel3.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 0, 300, 230));
+        jPanel3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 540, -1, -1));
+        jPanel3.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 530, -1, 100));
+
+        jSeparator6.setBackground(new java.awt.Color(102, 255, 255));
+        jSeparator6.setForeground(new java.awt.Color(102, 255, 255));
+        jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel3.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, -1, 450));
+
+        jSeparator2.setForeground(new java.awt.Color(102, 255, 255));
+        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 242, 970, 10));
+
+        jPanel14.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel14.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        confirmBillButton.setBackground(new java.awt.Color(44, 97, 93));
+        confirmBillButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        confirmBillButton.setText("Confirm Bill");
+        confirmBillButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmBillButtonActionPerformed(evt);
+            }
+        });
+        jPanel14.add(confirmBillButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 180, 44));
+
+        transactTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Transac ID", "Item ", "Quantity", "Sub-total"
+            }
+        ));
+        transactTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactTableMouseClicked(evt);
+            }
+        });
+        jScrollPane4.setViewportView(transactTable);
+
+        jPanel14.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 320, 210));
+        jPanel14.add(transactID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 30, -1));
+
+        jPanel3.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(592, 265, 350, 460));
 
         jPanel1.setBackground(new java.awt.Color(44, 97, 93));
         jPanel1.setLayout(null);
@@ -425,10 +483,10 @@ public class orders extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(580, Short.MAX_VALUE))
+                .addContainerGap(594, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,22 +494,24 @@ public class orders extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 720, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 702, Short.MAX_VALUE))
+                .addGap(0, 704, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void neworderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neworderButtonActionPerformed
-
+        float price = Float.parseFloat(priceTextField.getText());
+        int quantity = Integer.parseInt(quantityTextField.getText());
         try {
             Class.forName("com.mysql.jdbc.Driver");
             java.sql.Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_pos", "root", "");
             java.sql.Statement stmt = conn.createStatement();
 
-            String query = String.format("INSERT INTO transactions(menu_id,menu_name, bill, quantity) VALUES ('%s','%s','%f',%d) ", idTextField.getText(),nameTextField.getText(), Float.parseFloat(priceTextField.getText()), Integer.parseInt(quantityTextField.getText()));
+            String query = String.format("INSERT INTO transactions(menu_id,menu_name, bill, quantity,status) VALUES ('%s','%s','%f',%d,0) ", idTextField.getText(),nameTextField.getText(), price * quantity, Integer.parseInt(quantityTextField.getText()));
             stmt.executeUpdate(query);
             JOptionPane.showMessageDialog(this, "You have successfully order");
+            displayTransaction();
            
         } catch (Exception e) {
             System.out.println(e);
@@ -566,6 +626,29 @@ public class orders extends javax.swing.JFrame {
        new accounts().setVisible(true);
        this.dispose();
     }//GEN-LAST:event_accountsMouseClicked
+
+    private void confirmBillButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBillButtonActionPerformed
+      try {
+            Class.forName("com.mysql.jdbc.Driver");//load the driver
+            try ( java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_pos", "root", ""))//establishes connection
+            {
+                java.sql.Statement stmt = (java.sql.Statement) con.createStatement(); //get the connection stream(connection port)
+                stmt.executeUpdate(String.format("UPDATE transactions SET status = 1 WHERE order_id = %d",Integer.parseInt(transactID.getText())));
+                JOptionPane.showMessageDialog(this, "Order Paid");
+                con.close();
+                displayTransaction();
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e);
+        };
+    }//GEN-LAST:event_confirmBillButtonActionPerformed
+
+    private void transactTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactTableMouseClicked
+        DefaultTableModel model = (DefaultTableModel) transactTable.getModel();
+        int selectedRowIndex = transactTable.getSelectedRow();
+        
+        transactID.setText(model.getValueAt(selectedRowIndex, 0).toString());
+    }//GEN-LAST:event_transactTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -684,10 +767,30 @@ public class orders extends javax.swing.JFrame {
             System.out.println(e);
         };
     }
+    
+    public void displayTransaction(){
+        transactTable.setModel(new DefaultTableModel(null, new String[]{"Transac ID", "Item","Quantity","Sub-total"}));
+        try {
+            Class.forName("com.mysql.jdbc.Driver");//load the driver
+            try ( java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/system_pos", "root", ""))//establishes connection
+            {
+                java.sql.Statement stmt = (java.sql.Statement) con.createStatement(); //get the connection stream(connection port)
+                ResultSet datas = stmt.executeQuery("SELECT * FROM transactions WHERE status = 0");
+                DefaultTableModel model = (DefaultTableModel) transactTable.getModel();
+                while(datas.next()){
+                    model.addRow(new Object[]{datas.getInt("order_id"), datas.getString("menu_name"), datas.getInt("quantity"), datas.getFloat("bill")});
+                }
+                con.close();
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e);
+        };
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel accounts;
     private javax.swing.JTable breakfastTable;
+    private javax.swing.JButton confirmBillButton;
     private javax.swing.JLabel dashboard;
     private javax.swing.JTable dinnerTable;
     private javax.swing.JTextField idTextField;
@@ -704,6 +807,7 @@ public class orders extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -715,7 +819,12 @@ public class orders extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JButton logoutButton;
     private javax.swing.JTable lunchTable;
     private javax.swing.JTextField nameTextField;
@@ -724,6 +833,8 @@ public class orders extends javax.swing.JFrame {
     private javax.swing.JTextField priceTextField;
     private javax.swing.JLabel products;
     private javax.swing.JTextField quantityTextField;
+    private javax.swing.JTextField transactID;
+    private javax.swing.JTable transactTable;
     private javax.swing.JLabel transactions;
     // End of variables declaration//GEN-END:variables
 }

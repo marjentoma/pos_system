@@ -26,6 +26,7 @@ public class products extends javax.swing.JFrame {
      */
     public products() {
         initComponents();
+        this.setLocationRelativeTo(null);
         displayProducts();
     }
 
@@ -58,6 +59,7 @@ public class products extends javax.swing.JFrame {
         updateButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -76,11 +78,13 @@ public class products extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(220, 232, 238));
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 58, -1, -1));
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         productsTable.setBackground(new java.awt.Color(153, 204, 255));
         productsTable.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
@@ -99,18 +103,7 @@ public class products extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(productsTable);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 929, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 180));
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 82, -1, 170));
 
@@ -125,7 +118,7 @@ public class products extends javax.swing.JFrame {
         });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(674, 24, 174, 47));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel4.setBackground(new java.awt.Color(0, 102, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -182,14 +175,19 @@ public class products extends javax.swing.JFrame {
         });
         jPanel4.add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 176, 118, 44));
 
-        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 348, 584, 380));
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 584, 380));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("MENU");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 24, 165, -1));
+        jLabel7.setText(" MENU LIST");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 430, -1));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 1230, 1000));
+        jSeparator2.setForeground(new java.awt.Color(51, 255, 255));
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 20, 690));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 930, -1));
 
         jPanel1.setBackground(new java.awt.Color(44, 97, 93));
         jPanel1.setLayout(null);
@@ -372,7 +370,7 @@ public class products extends javax.swing.JFrame {
         jPanel1.add(jPanel11);
         jPanel11.setBounds(0, 420, 170, 50);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 720));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 690));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -605,6 +603,7 @@ catch (javax.swing.UnsupportedLookAndFeelException ex) {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton logoutButton;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JLabel orders;
